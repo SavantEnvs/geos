@@ -1,0 +1,9 @@
+project: savantenvs/geos
+target: fuzz_geo2
+cmds:
+  - cmd: /mayhem/fuzz_geo2
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_geo2.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_geo2/testsuite
